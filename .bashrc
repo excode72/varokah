@@ -123,14 +123,13 @@ echo "" | lolcat
 echo "" | lolcat
 echo "        ----[SELAMAT DATANG DI VPS YUSUF ARDIANSYAH]---"| boxes -d dog | lolcat
 echo "        ====================================================="| lolcat
-echo "        #           WhatsApp     : 082139743432             #"| lolcat
-echo "        #           Telegram     : CyberSS                  #"| lolcat
-echo "        #           Facebook     : fb.com/t34mh4ck3r        #"| lolcat
-echo "        #           Pin-BBM      : yu-suf                   #"| lolcat
+echo "        #           WhatsApp     : 083115516541             #"| lolcat
+echo "        #           Facebook     : fb.com/rakel.danhiguain  #"| lolcat
+echo "        #           Line         : nevd72                   #"| lolcat
 echo "        #                                                   #"| lolcat
-echo "        #   Silahkan ketik menu lalu ENTER untuk pilihan    #"| lolcat
+echo "        #         Silahkan ketik ( menu ) lalu ENTER        #"| lolcat
 echo "        #                                                   #"| lolcat
-echo "        #        Copyright # yusuf-ardiansyah   2017        #"| lolcat
+echo "        #         Powered by NevD72 VPS Plus  2017          #"| lolcat
 echo "        ====================================================="| lolcat
 date +"                    %A, %d-%m-%Y" | lolcat
 date +"                            %H:%M:%S %Z" | lolcat
