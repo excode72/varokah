@@ -30,7 +30,7 @@ vps="aneka";
 #if [[ $vps = "zvur" ]]; then
 	#source="http://"
 #else
-	source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
+	source="https://raw.githubusercontent.com/excode72/varokah"
 #fi
 
 # go to root
@@ -60,25 +60,22 @@ if ! grep -w -q $MYIP IP; then
 	       ♦                     &                       ♦
 	       ♦               DENY SISWANTO                 ♦
                ♦       -----------About Us------------       ♦ 
-               ♦            Tel : +6283843700098             ♦
-               ♦         { Sms/whatsapp/telegram }           ♦ 
-               ♦       http://facebook.com/t34mh4ck3r        ♦    
-               ♦   http://www.facebook.com/elang.overdosis   ♦
+               ♦            Tel : +6283115516541             ♦
+               ♦              { LINE: nevd72 }               ♦ 
+               ♦     http://facebook.com/rakel.danhiguain    ♦    
                ♦                                             ♦
                =============== OS-32 & 64-bit ================
                
                  Please make payment before use auto script
                  ..........................................
-                 .        Price: Rp.20.000 = 1IP          .
-                 .          *****************             .
-                 .           Maybank Account              .
+                 .         Price: Rp.20.000 = 1IP         .
+                 .           *****************            .
+                 .             Pay via Pulsa              .
                  .           =================            .
-                 .          No   : Hubungi admin          .
-                 .          Name : Yusuf Ardiansyah       .
                  ..........................................   
                           Thank You For Choice Us"
 
-	echo "        Hubungi: editor ( elang overdosis atau deeniedoank)"
+	echo "        Hubungi: editor ( excode72 )"
 	
 	rm /root/IP
 	rm cinta7.sh
@@ -170,7 +167,7 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf $source/debian7/nginx.conf
 mkdir -p /home/vps/public_html
-echo "<pre>Modified by elang overdosis n' yusuf ardiansyah</pre>" > /home/vps/public_html/index.html
+echo "<pre>Modified by ExCode72</pre>" > /home/vps/public_html/index.html
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
 wget -O /etc/nginx/conf.d/vps.conf $source/debian7/vps.conf
 sed -i 's/listen = \/var\/run\/php5-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php5/fpm/pool.d/www.conf
@@ -491,7 +488,7 @@ echo "" | tee -a log-install.txt
 if [[ $vps = "zvur" ]]; then
 	echo "ALL SUPPORTED BY CLIENT VPS" | tee -a log-install.txt
 else
-	echo "ALL SUPPORTED BY TEAM HACKER" | tee -a log-install.txt
+	echo "POWERED BY ExCode72" | tee -a log-install.txt
 	
 fi
 echo "Credit to all developers script, Yusuf ardiansyah" | tee -a log-install.txt
