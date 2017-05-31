@@ -28,7 +28,7 @@ vps="aneka";
 #if [[ $vps = "zvur" ]]; then
 	#source="http://"
 #else
-	source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
+	source="https://raw.githubusercontent.com/yusuf-ardiansyah/y"
 #fi
 
 # go to root
@@ -39,33 +39,40 @@ wget -q -O IPcarding $source/debian7/IPcarding.txt
 if ! grep -w -q $MYIP IPcarding; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "zvur" ]]; then
-		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
+		echo "Hubungi: editor YUSUS-ARDIANSYAH"
 	else
-		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
+		echo "Hubungi: editor YUSUS-ARDIANSYAH"
 	fi
 	rm -f /root/IPcarding
 	rm /root/IPcarding
 	exit
 fi
+clear
+echo "####################################
+# Uniscan project                  #
+# http://uniscan.sourceforge.net/  #
+# edited elang overdosis           #
+####################################
 
-echo "##############################################################
 
-OPTIONS:      -h = untuk mengetahui command command apa aja yang ada diuniscan
-              -u = untuk memasukkan url
-              -f = untuk multy scan url
-              -b = untuk membuat uniscan bekerja dibackground atau latar belakang operating system
-              -q = untuk mengecheck directory yang ada di website tersebut,disini kita bisa mengetahui file file yang tersembunyi pada website tersebut
-              -w = untuk mengecheck file yang ada di website tersebut
-              -e = untuk mengecheck apakah ada robots.txt dan sitemap.xml
-              -d = untuk mencari kelemahan website dengan exploit exploit yang ada diuniscan tersebut
-              -s = hampir sama dengan -d
-              -r = untuk strees testing,stress testing sudah dijelakan di postingan sebelumnya
-              -i = <dork> Bing search
-              -o = <dork> Google search
-              -g = Web fingerprint
-              -j = Server fingerprint
 
-contoh dork:  inurl:shop.php?do=part&id= 
+OPTIONS:
+        -u    =  <url> example: https://www.example.com/
+        -f    =  <file> list of url
+        -b    =  Uniscan go to background
+        -q    =  Enable Directory checks
+        -w    =  Enable File checks
+        -e    =  Enable robots.txt and sitemap.xml check
+        -d    =  Enable Dynamic checks
+        -s    =  Enable Static checks
+        -r    =  Enable Stress checks
+        -i    =  <dork> Bing search
+        -o    =  <dork> Google search
+        -g    =  Web fingerprint
+        -j    =  Server fingerprint
+
+contoh dork: 
+              inurl:shop.php?do=part&id= 
               inurl:shop_category.php?id= 
               inurl:shopping.php?id= 
               inurl:shopping.php?id= 
@@ -84,15 +91,11 @@ contoh penulisan: -u http://www.example.com/ -qweds
                   -i "ip:xxx.xxx.xxx.xxx"
                   -o "dork_yg_mau_dicari"
                   -u https://www.example.com/ -r"
-		  echo ""
- echo "           KELUAR tekan ctrl + z "
- echo ""
+ 
 # web vuln
 cd /root
 read -p "Masukkan OPTION seperti (contoh penulisan): " webscaner
 cd uniscan6.2
 ./uniscan.pl $webscaner
 echo ""
-cd
-web-vuln.sh
 cd /root

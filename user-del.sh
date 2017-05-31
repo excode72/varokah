@@ -9,7 +9,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com)
 
 echo "---------------------- HAPUS AKUN SSH -----------------------"
 
-	echo "          DEVELOPED BY YUSUF ARDIANSYAH AND ELANG OVERDOSIS            "
+	echo "          DEVELOPED BY YUSUF-ARDIANSYAH atau (082139743432)            "
 echo ""
 
 # begin of user-list

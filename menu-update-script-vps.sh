@@ -23,7 +23,7 @@ vps="aneka";
 #if [[ $vps = "zvur" ]]; then
 	#source="http://"
 #else
-	source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
+	source="https://raw.githubusercontent.com/yusuf-ardiansyah/y"
 #fi
 
 # go to root
@@ -33,33 +33,11 @@ cd
 wget -q -O IP $source/debian7/IP.txt
 if ! grep -w -q $MYIP IP; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
-        echo "     
-                       
-               =============== OS-32 & 64-bit ================
-               ♦                                             ♦
-               ♦   AUTOSCRIPT CREATED BY YUSUF ARDIANSYAH    ♦
-	       ♦                     &                       ♦
-	       ♦               DENY SISWANTO                 ♦
-               ♦       -----------About Us------------       ♦ 
-               ♦            Tel : +6283843700098             ♦
-               ♦         { Sms/whatsapp/telegram }           ♦ 
-               ♦       http://facebook.com/t34mh4ck3r        ♦    
-               ♦   http://www.facebook.com/elang.overdosis   ♦
-               ♦                                             ♦
-               =============== OS-32 & 64-bit ================
-               
-                 Please make payment before use auto script
-                 ..........................................
-                 .        Price: Rp.20.000 = 1IP          .
-                 .          *****************             .
-                 .           Maybank Account              .
-                 .           =================            .
-                 .          No   : Hubungi admin          .
-                 .          Name : Yusuf Ardiansyah       .
-                 ..........................................   
-                          Thank You For Choice Us"
-
-	echo "        Hubungi: editor ( elang overdosis atau deeniedoank)"
+	if [[ $vps = "zvur" ]]; then
+		echo "Hubungi: editor YUSUF-ARDIANSYAH atau (082139743432)"
+	else
+		echo "Hubungi: editor YUSUF-ARDIANSYAH atau (082139743432)"
+	fi
 	rm -f /root/IP
 	exit
 fi
@@ -68,15 +46,6 @@ function update_script() {
 cd
 wget -O /usr/bin/updatescript.sh $source/debian7/updatescript.sh && clear && chmod +x /usr/bin/updatescript.sh && /usr/bin/updatescript.sh && rm -f /root/IP && rm -f /root/IPcarding
 }
-
-function ocspanel() {
-cd
-wget -O /usr/bin/ocs-panels $source/debian7/ocs-panels
-	
-	chmod +x /usr/bin/ocs-panels
-	/usr/bin/ocs-panels
-	rm /usr/bin/ocs-panels
-	}
 function anti_ddos() {
 if [ -d '/usr/local/ddos' ]; then
 echo; echo; echo "Gagal boss,Anti ddos sudah terinstal silahkan uninstall terlebih dulu."
@@ -102,14 +71,22 @@ echo; echo -n 'Creating cron to run script every minute.....(Default setting)'
 echo '.....done'
 echo; echo 'Installation has completed.'
 echo 'Config file is at /usr/local/ddos/ddos.conf'
-echo 'Please send in your comments and/or suggestions to zaf@vsnl.com'
+echo 'Please send in your comments and/or suggestions to yusuf-ardiansyah.com'
 }
-	
 
+function card() {
+	if [[ ! -e /root/sqlmap ]]; then
+	echo "Maaf boss sqlmap belum di install, Silahkan install dulu :p" | lolcat
+	exit
+	fi
+	cd
+	carding_hack
+	}
+	
 clear
 echo "SELAMAT DATANG DI MENU UPDATE SCRIPT VPS" | boxes -d dog | lolcat
-PS3='Silahkan ketik angka 1-4 lalu ENTER: '
-options=("Update Script VPS" "Install DDOS deflate" "Install OCS Panel" "Install Tool Carding" "Quit")
+PS3='Silahkan ketik angka 1-5 lalu ENTER: '
+options=("Update Script VPS" "Install DDOS deflate" "Install SQLmap" "Carding" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -122,12 +99,7 @@ do
 	anti_ddos
 	break
 	;;
-	"Install OCS Panel")
-	ocspanel
-	break
-	;;
-	
-	"Install Tool Carding")
+	"Install SQLmap")
 	cd /root
 	wget -O /usr/bin/install-sqlmap.sh $source/debian7/install-sqlmap.sh
 	chmod 755 /usr/bin/install-sqlmap.sh
@@ -136,6 +108,10 @@ do
 	rm -f /root/IPcarding
 	rm /usr/bin/install-sqlmap.sh
 
+	break
+	;;
+	"Carding")
+	card
 	break
 	;;
         "Quit")

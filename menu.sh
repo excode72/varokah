@@ -18,14 +18,7 @@ echo
 	#if [ "$MYIP" = "" ]; then
 		#MYIP=$(wget -qO- ipv4.icanhazip.com)
 	#fi
-function card() {
-	if [[ ! -e /root/sqlmap ]]; then
-	echo "Maaf boss sqlmap belum di install, Silahkan install dulu :p" | lolcat
-	exit
-	fi
-	cd
-	carding_hack
-	}
+
 	clear
 
 	#echo "--------------- Selamat datang di Server - IP: $MYIP ---------------"
@@ -52,13 +45,13 @@ function card() {
 	#echo -e "\e[032;1mTotal amount of swap:\e[0m $swap MB"
 	#echo -e "\e[032;1mSystem uptime:\e[0m $up"
 lolcat -F 0.3 -S 0 /usr/bin/bannermenu
-echo "                    Server: $MYIP" | lolcat
-date +"                    %A, %d-%m-%Y" | lolcat
-date +"                            %H:%M:%S %Z" | lolcat
+echo "                           Server: $MYIP" | lolcat
+date +"                           %A, %d-%m-%Y" | lolcat
+date +"                                   %H:%M:%S %Z" | lolcat
 echo ""
 echo ""
 PS3='Silahkan ketik nomor pilihan anda lalu tekan ENTER: '
-options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User Dan Tanggal Kadaluarsa" "Hapus User" "Buat User PPTP VPN" "Monitoring User Dan Tendang" "Monitor User Login" "Daftar User Aktif" "Daftar User Kadaluarsa" "Disable User Kadaluarsa" "Hapus User Kadaluarsa" "Banned User" "Unbanned User" "Penggunaan Ram" "Speedtest" "Benchmark" "Manual Kill Multi Login" "(ON) Auto Kill Multi Login" "(OFF) Auto Kill Multi Login" "Ganti Password VPS" "Bersihkan Cache Ram Manual" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Ganti Port OpenSSH" "Ganti Port Dropbear" "Ganti Port Squid3" "Ganti Port OpenVPN" "Update Script VPS" "Carding" "Quit")
+options=("Buat User SSH/OVPN" "Buat User SSH/OVPN Trial" "Perbarui User" "Ganti Password User SSH/OVPN" "Semua User Dan Tanggal Kadaluarsa" "Hapus User" "Buat User PPTP VPN" "Monitoring User Dan Tendang" "Monitor User Login" "Daftar User Aktif" "Daftar User Kadaluarsa" "Disable User Kadaluarsa" "Hapus User Kadaluarsa" "Banned User" "Unbanned User" "Penggunaan Ram" "Speedtest" "Benchmark" "Manual Kill Multi Login" "(ON) Auto Kill Multi Login" "(OFF) Auto Kill Multi Login" "Ganti Password VPS" "Bersihkan Cache Ram Manual" "Edit Banner Login" "Edit Banner Menu" "Lihat Lokasi User" "Restart Webmin" "Restart Server VPS" "Restart Dropbear" "Restart OpenSSH" "Restart Squid3" "Restart OpenVPN" "Ganti Port OpenSSH" "Ganti Port Dropbear" "Ganti Port Squid3" "Ganti Port OpenVPN" "Update Script VPS" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -117,14 +110,14 @@ do
 	"(ON) Auto Kill Multi Login")
 	clear 
 	read -p "Isikan Maximal User Login (1-2): " MULTILOGIN2
-	echo "@reboot root /root/userlimit.sh" > /etc/cron.d/userlimitreboot
+	#echo "@reboot root /root/userlimit.sh" > /etc/cron.d/userlimitreboot
 	echo "* * * * * root /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit1
 	   echo "* * * * * root sleep 10; /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit2
            echo "* * * * * root sleep 20; /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit3
            echo "* * * * * root sleep 30; /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit4
            echo "* * * * * root sleep 40; /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit5
            echo "* * * * * root sleep 50; /usr/bin/userlimit.sh $MULTILOGIN2" > /etc/cron.d/userlimit6
-	   echo "@reboot root /root/userlimitssh.sh" >> /etc/cron.d/userlimitreboot
+	   #echo "@reboot root /root/userlimitssh.sh" >> /etc/cron.d/userlimitreboot
 	   echo "* * * * * root /usr/bin/userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit1
 	   echo "* * * * * root sleep 11; /usr/bin/userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit2
            echo "* * * * * root sleep 21; /usr/bin/userlimitssh.sh $MULTILOGIN2" >> /etc/cron.d/userlimit3
@@ -167,9 +160,7 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	;;
 	"Bersihkan Cache Ram Manual")
 	clear
-	echo "---------------------------------------------"
 	echo "Sebelum..." | lolcat
-	echo "---------------------------------------------"
        free -h
 	echo 1 > /proc/sys/vm/drop_caches
 	sleep 1
@@ -177,14 +168,11 @@ User Sudah Bisa Multi Login Lagi!!!" | boxes -d boy | lolcat
 	sleep 1
 	echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a
 	sleep 1
-	echo "---------------------------------------------"
+	echo ""
 	echo "Sesudah..." | lolcat
-	echo "---------------------------------------------"
 	free -h
-	echo "---------------------------------------------"
 	echo "SUKSES..!!!Cache ram anda sudah di bersihkan." | boxes -d boy | lolcat
-        echo ""
-	break
+        break
 	;;
 	"Daftar User Aktif")
 	clear
@@ -360,7 +348,7 @@ Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"| boxes -d
 	    service dropbear stop
 	    service ssh stop
 	    service openvpn stop
-            #sed -i "s/port [0-9]*/port $PORT/" /etc/openvpn/1194.conf
+            sed -i "s/port [0-9]*/port $PORT/" /etc/openvpn/1194.conf
 	    cp /etc/openvpn/client.ovpn /home/vps/public_html/client.ovpn
             sed -i "s/ipserver ports/$MYIP $PORT/g" /home/vps/public_html/client.ovpn
 	    sed -i "s/ipserver/$MYIP/g" /home/vps/public_html/client.ovpn
@@ -374,11 +362,7 @@ Port dropbear tidak boleh sama dengan port openVPN/openSSH/squid3 !!!"| boxes -d
 	 /usr/bin/menu-update-script-vps.sh
 	 break
 	 ;;
-	 "Carding")
-	 clear
-	 card
-	 break
-	 ;;
+	 
 	"Quit")
 	
 	break

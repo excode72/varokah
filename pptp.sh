@@ -11,7 +11,7 @@ MYIP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*
 vps="aneka";
 
 
-	source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
+	source="https://raw.githubusercontent.com/yusuf-ardiansyah/y"
 
 
 # go to root
@@ -22,16 +22,16 @@ wget -q -O IP $source/debian7/IP.txt
 if ! grep -w -q $MYIP IP; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "zvur" ]]; then
-		echo "Hubungi: Yusuf ardiansyah atau elang overdosis)"
+		echo "Hubungi: DEVELOPED BY YUSUF-ARDIANSYAH atau (082139743432)"
 	else
-		echo "Hubungi: Yusuf ardiansyah atau elang overdosis)"
+		echo "Hubungi: DEVELOPED BY YUSUF-ARDIANSYAH atau (082139743432)"
 	fi
 	rm -f /root/IP
 	exit
 fi
 
-u="deenie11"
-p="deenie"
+u="YUSUF-ARDIANSYAH"
+p="ardy"
 
 # get the VPS IP
 #ip=`ifconfig venet0:0 | grep 'inet addr' | awk {'print $2'} | sed s/.*://`

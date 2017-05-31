@@ -79,7 +79,7 @@ echo " Tetap Multi Login Ganti Passnya baru Kill Lagi " | lolcat
 echo " Caranya pake Kill nomor PID " | lolcat
 echo "----------------------------------------------------------------"
 
-	echo " DEVELOPED BY YUSUF ARDIANSYAH n ELANG OVERDOSIS "| lolcat
+	echo " DEVELOPED BY YUSUF-ARDIANSYAH atau (082139743432) "| lolcat
 echo "----------------------------------------------------------------"
 echo ""
 

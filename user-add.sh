@@ -18,7 +18,7 @@ fi
 echo "------------------------ MEMBUAT AKUN SSH ------------------------"| lolcat
 
 
-	echo "           DEVELOPED BY YUSUF ARDIANSYAH AND ELANG OVERDOSIS           " | lolcat
+	echo "           DEVELOPED BY YUSUF-ARDIANSYAH atau (082139743432)           " | lolcat
 echo ""
 
 read -p "Isikan username: " username
@@ -57,7 +57,7 @@ echo -e "   DI LARANG:                              "| lolcat
 echo -e "   HACKING-DDOS-PHISING-SPAM-TORENT        " | lolcat
 echo -e "   CARDING-CRIMINAL CYBER.                 "| lolcat
 echo -e "===========================================" | lolcat
-echo -e "   Script by Yusuf Ardiansyah              "| lolcat
+echo -e "   Script by YUSUF-ARDIANSYAH              "| lolcat
 echo -e "   Config OVPN:                            "| lolcat
 echo -e "   http://$MYIP:81/client.ovpn        " | lolcat
 echo -e "-------------------------------------------" | lolcat

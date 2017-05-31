@@ -1,8 +1,24 @@
 #!/bin/bash
 
 clear
+echo "Apa Anda Sudah Install Sqlmap, Klo Belum Install Dulu Boss!!!" | lolcat
+	sleep 1
+	clear
+	echo; echo -n 'Loading source files...'
+echo -n '.'
+sleep 1
+echo -n '.'
+sleep 1
+echo -n '.'
+sleep 1
+echo -n '.'
+sleep 1
+echo -n '.'
+echo -n '.'
+echo -n '.'
+clear
 	if [[ ! -e /root/sqlmap ]]; then
-	echo "Maaf boss sqlmap belum di install, Silahkan install dulu tool carding :p" | lolcat
+	echo "Maaf boss sqlmap belum di install, Silahkan install dulu :p" | lolcat
 	exit
 	fi
 	cd
@@ -23,10 +39,13 @@ if [[ $ether = "" ]]; then
         ether=eth0
 fi
 
+#vps="zvur";
+vps="aneka";
+
 #if [[ $vps = "zvur" ]]; then
 	#source="http://"
 #else
-	source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
+	source="https://raw.githubusercontent.com/yusuf-ardiansyah/y"
 #fi
 
 # go to root
@@ -36,34 +55,12 @@ cd
 wget -q -O IPcarding $source/debian7/IPcarding.txt
 if ! grep -w -q $MYIP IPcarding; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
-        echo "     
-                       
-               =============== OS-32 & 64-bit ================
-               ♦                                             ♦
-               ♦   AUTOSCRIPT CREATED BY YUSUF ARDIANSYAH    ♦
-	       ♦                     &                       ♦
-	       ♦               DENY SISWANTO                 ♦
-               ♦       -----------About Us------------       ♦ 
-               ♦            Tel : +6283843700098             ♦
-               ♦         { Sms/whatsapp/telegram }           ♦ 
-               ♦       http://facebook.com/t34mh4ck3r        ♦    
-               ♦   http://www.facebook.com/elang.overdosis   ♦
-               ♦                                             ♦
-               =============== OS-32 & 64-bit ================
-               
-                 Please make payment before use auto script
-                 ..........................................
-                 .        Price: Rp.20.000 = 1IP          .
-                 .          *****************             .
-                 .           Maybank Account              .
-                 .           =================            .
-                 .          No   : Hubungi admin          .
-                 .          Name : Yusuf Ardiansyah       .
-                 ..........................................   
-                          Thank You For Choice Us"
-
-	echo "        Hubungi: editor ( elang overdosis atau deeniedoank)"
-	rm -f /root/IPcarding
+	if [[ $vps = "zvur" ]]; then
+		echo "Hubungi: editor YUSUF-ARDIANSYAH atau (082139743432"
+	else
+		echo "Hubungi: editor YUSUF-ARDIANSYAH atau (082139743432"
+	fi
+	rm /root/IPcarding
 	exit
 fi
 cd
@@ -74,25 +71,19 @@ function situs() {
 	fi
 	cd
 	less /root/uniscan6.2/sites.txt
-
 	}
-
 function tool_carding() {
-         if [[ ! -e /root/BinGoo/bingoo ]]; then
-	echo "Maaf boss tool belum di install, Silahkan install dulu di menu update script" | lolcat
+         if [[ ! -e /root/bingoo/bingoo ]]; then
+	echo "Maaf boss tool belum di install, Silahkan install dulu :p" | lolcat
 	exit
 	fi
 	cd
-	cd BinGoo
+	cd bingoo
 	./bingoo
 	}
 	echo ""
-	echo "Gunakan dengan bijak !!!"
-	echo ""
-	echo ""
-
-	PS3='Silahkan pilih (1-6) lalu ENTER:'
-options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Sqlmap" "Manual Sqlmap" "Full Tool Carding" "Quit")
+	PS3='Silahkan pilih (1-4):'
+options=("Cari Web Vuln" "Hasil Pencarian Web Vuln" "Hacked" "Hacked Manual Sqlmap" "Full Tool Carding" "PHPKIT" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -105,33 +96,29 @@ do
 	  situs
 	  break
 	  ;;
-	     "Sqlmap")
+	     "Hacked")
 	     carding.sh
-	 
 	     break
 	    ;;
-	    "Manual Sqlmap")
+	    "Hacked Manual Sqlmap")
 	    cd sqlmap && ./sqlmap.py -h
 	    echo "Contoh: 
-	    
-	    Ketik: ./sqlmap.py -u http://www.siteTARGET.com --dbs (Enter)" | lolcat
-	   cd sqlmap
+	    1. Ketik: cd sqlmap (Enter)
+	    2. Ketik: ./sqlmap.py -u http://www.siteTARGET.com --dbs (Enter)" | lolcat
 	   
-	
 	    break
 	    ;;
 	    "Full Tool Carding")
 	    clear
 	    tool_carding
-	  
 	    break
 	    ;;
-	    #"PHPKIT")
-	    #clear
-	   # cd
-	    #./phpkit.sh
-	    #break
-	  #  ;;
+	    "PHPKIT")
+	    clear
+	    cd
+	    ./phpkit.sh
+	    break
+	    ;;
 	    "Quit")
 	    exit
 	    break

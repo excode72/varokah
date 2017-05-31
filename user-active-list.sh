@@ -23,7 +23,7 @@ clear
 
 
 
-echo "DEVELOPED BY YUSUF ARDIANSYAH AND ELANG OVERDOSIS"
+echo "DEVELOPED BY YUSUF-ARDIANSYAH atau (082139743432)"
 echo ""
 
 cat /root/activeuser.txt

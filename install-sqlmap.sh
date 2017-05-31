@@ -33,7 +33,7 @@ fi
 #if [[ $vps = "zvur" ]]; then
 	#source="http://"
 #else
-	source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
+	source="https://raw.githubusercontent.com/yusuf-ardiansyah/y"
 #fi
 
 # go to root
@@ -42,40 +42,19 @@ echo; echo -n 'Loading...'
 echo -n '.'
 sleep 1
 echo -n '.'
+sleep 1
+echo -n '.'
 cd
 # check registered ip
 wget -q -O IPcarding $source/debian7/IPcarding.txt
 if ! grep -w -q $MYIP IPcarding; then
-echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
-        echo "     
-                       
-               =============== OS-32 & 64-bit ================
-               ♦                                             ♦
-               ♦   AUTOSCRIPT CREATED BY YUSUF ARDIANSYAH    ♦
-	       ♦                     &                       ♦
-	       ♦               DENY SISWANTO                 ♦
-               ♦       -----------About Us------------       ♦ 
-               ♦            Tel : +6283843700098             ♦
-               ♦         { Sms/whatsapp/telegram }           ♦ 
-               ♦       http://facebook.com/t34mh4ck3r        ♦    
-               ♦   http://www.facebook.com/elang.overdosis   ♦
-               ♦                                             ♦
-               =============== OS-32 & 64-bit ================
-               
-                 Please make payment before use auto script
-                 ..........................................
-                 .        Price: Rp.20.000 = 1IP          .
-                 .          *****************             .
-                 .           Maybank Account              .
-                 .           =================            .
-                 .          No   : Hubungi admin          .
-                 .          Name : Yusuf Ardiansyah       .
-                 ..........................................   
-                          Thank You For Choice Us"
-
-	echo "        Hubungi: editor ( elang overdosis atau deeniedoank)"
+	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
+	if [[ $vps = "zvur" ]]; then
+		echo "Hubungi: editor  YUSUF-ARDIANSYAH atau (082139743432) "
+	else
+		echo "Hubungi: editor  YUSUF-ARDIANSYAH atau (082139743432) "
+	fi
 	rm -f /root/IPcarding
-	rm -f /etc/bin/install-sqlmap.sh
 	exit
 fi
 echo ""
@@ -90,28 +69,7 @@ cd sqlmap
 chmod 755 sqlmap.py
 
 echo -n '.'
-cd /root
-git clone https://github.com/elangoverdosis/fimap.git
-cd fimap
-cd src
-chmod 755 autoawesome.py
-chmod 755 baseClass.py
-chmod 755 baseTools.py
-chmod 755 bingScan.py
-chmod 755 codeinjector.py
-chmod 755 config.py
-chmod 755 crawler.py
-chmod 755 fimap.py
-chmod 755 googleScan.py
-chmod 755 language.py
-chmod 755 massScan.py
-chmod 755 plugininterface.py
-chmod 755 report.py
-chmod 755 singleScan.py
-chmod 755 ssh.py
-chmod 755 targetScanner.py
 
-clear
 cd /root
 wget -O /usr/bin/carding.sh $source/debian7/carding.sh
 chmod +x /usr/bin/carding.sh
@@ -132,20 +90,22 @@ echo -n '.'
 # bingoo
 apt-get install lynx
 apt-get install curl
-git clone https://github.com/elangoverdosis/BinGoo.git
+git clone https://github.com/elangoverdosis/bingoo.git
 clear
-
+# phpkit
+wget https://raw.githubusercontent.com/elangoverdosis/PHPKIT/phpkit.sh
+wget https://raw.githubusercontent.com/elangoverdosis/PHPKIT/pHpKit-SQLi.rb
 clear
-
-cd
+chmod +x ./pHpKit-SQLi.rb
+chmod +x ./phpkit.sh
 echo -n '.'
 
 wget $source/debian7/uniscan6.2.tar.gz
 clear
 tar xf uniscan6.2.tar.gz
 sed -i 's/$func->CheckUpdate();/#$func->CheckUpdate();/g' /root/uniscan6.2/uniscan.pl
-#wget -O /root/uniscan6.2/Languages/en.lang $source/debian7/en.lang
-#chmod 644 /root/uniscan6.2/Languages/en.lang
+wget -O /root/uniscan6.2/Languages/en.lang $source/debian7/en.lang
+chmod 644 /root/uniscan6.2/Languages/en.lang
 rm uniscan6.2.tar.gz
 cd
 echo -n '.'

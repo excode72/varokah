@@ -29,7 +29,7 @@ vps="aneka";
 #if [[ $vps = "zvur" ]]; then
 	#source="http://"
 #else
-	source="https://raw.githubusercontent.com/elangoverdosis/deeniedoank"
+	source="https://raw.githubusercontent.com/yusuf-ardiansyah/y"
 #fi
 
 # go to root
@@ -40,9 +40,9 @@ wget -q -O IP $source/debian7/IP.txt
 if ! grep -w -q $MYIP IP; then
 	echo "Maaf, hanya IP yang terdaftar yang bisa menggunakan script ini!"
 	if [[ $vps = "zvur" ]]; then
-		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
+		echo "Hubungi: editor YUSUF-ARDIANSYAH atau (082139743432)"
 	else
-		echo "Hubungi: editor ( elang overdoasis atau deeniedoank)"
+		echo "Hubungi: editor YUSUF-ARDIANSYAH atau (082139743432)"
 	fi
 	rm -f /root/IP
 	rm -f /root/IPcarding
@@ -87,7 +87,7 @@ cd
 #wget -O /usr/bin/clearcache.sh $source/debian7/clearcache.sh
 #wget -O /usr/bin/bannermenu $source/debian7/bannermenu
 wget -O /usr/bin/menu-update-script-vps.sh $source/debian7/menu-update-script-vps.sh
-echo "0 */6 * * * root /usr/bin/clearcache.sh" > /etc/cron.d/clearcache1
+
 
 #chmod +x /usr/bin/benchmark
 #chmod +x /usr/bin/speedtest

@@ -17,7 +17,7 @@ fi
 
 echo "------------------- MEMBUAT AKUN  PPTP VPN ----------------------" | lolcat
 
-	echo "          DEVELOPED BY YUSUF ARDIANSYAH AND ELANG OVERDOSIS            " | lolcat
+	echo "          DEVELOPED BY YUSUF-ARDIANSYAH atau (082139743432)            " | lolcat
 echo ""
 
 read -p "Isikan username baru: " username
